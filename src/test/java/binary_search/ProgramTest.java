@@ -1,0 +1,53 @@
+package binary_search;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class ProgramTest {
+    @Test
+    public void TestCase1() {
+        assertTrue(Program.binarySearch(new int[]{1, 5, 23, 111}, 111) == 3);
+    }
+
+    @Test
+    public void TestCase2() {
+        assertTrue(Program.binarySearch(new int[] {1, 5, 23, 111}, 5) == 1);
+    }
+
+    @Test
+    public void TestCase3() {
+        assertTrue(Program.binarySearch(new int[] {1, 5, 23, 111}, 35) == -1);
+    }
+
+    @Test
+    public void TestCase4() {
+        assertTrue(Program.binarySearch(new int[] {0, 1, 21, 33, 45, 45, 61, 71, 72, 73}, 33) == 3);
+    }
+
+    @Test
+    public void TestCase5() {
+        assertTrue(Program.binarySearch(new int[] {0, 1, 21, 33, 45, 45, 61, 71, 72, 73}, 72) == 8);
+    }
+
+    @Test
+    public void TestCase6() {
+        assertTrue(Program.binarySearch(new int[] {0, 1, 21, 33, 45, 45, 61, 71, 72, 73}, 73) == 9);
+    }
+
+    @Test
+    public void TestCase7() {
+        assertTrue(Program.binarySearch(new int[] {0, 1, 21, 33, 45, 45, 61, 71, 72, 73}, 70) == -1);
+    }
+
+    @Test
+    public void TestCase8() {
+        assertTrue(Program.binarySearch(new int[] {0, 1, 21, 33, 45, 45, 61, 71, 72, 73, 355}, 355) == 10);
+    }
+
+    @Test
+    public void TestCase9() {
+        assertTrue(Program.binarySearch(new int[] {0, 1, 21, 33, 45, 45, 61, 71, 72, 73, 355}, 354) == -1);
+    }
+
+}
